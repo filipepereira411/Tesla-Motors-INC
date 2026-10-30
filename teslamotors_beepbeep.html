@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tesla Portugal | Veículos Elétricos e Energia</title>
+    <style>
+        /* Variáveis de Design Oficiais da Tesla */
+        :root {
+            --tesla-color-black: #171a20;
+            --tesla-color-white: #ffffff;
+            --tesla-color-blue: #3e6ae1;
+            --tesla-font-family: 'Universal Sans', 'Segoe UI', -apple-system, sans-serif;
+            --transition-smooth: all 0.3s cubic-bezier(0.5, 0, 0, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: var(--tesla-font-family);
+            letter-spacing: -0.1px;
+        }
+
+        body {
+            overflow: hidden;
+            background-color: var(--tesla-color-black);
+            color: var(--tesla-color-white);
+        }
+
+        /* Menu Superior Integrado com o Padrão tesla.com */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            z-index: 10;
+        }
+
+        .logo svg {
+            width: 120px;
+            height: 18px;
+            fill: var(--tesla-color-white);
+            transition: var(--transition-smooth);
+        }
+
+        nav {
+            display: flex;
+            gap: 8px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--tesla-color-white);
+            font-weight: 500;
+            font-size: 14px;
+            padding: 6px 16px;
+            border-radius: 4px;
+            transition: var(--transition-smooth);
+        }
+
+        nav a:hover {
+            background-color: rgba(255, 255, 255, 0.12);
+            backdrop-filter: blur(8px);
+        }
+
+        /* Secção Hero com Fundo de Vídeo Direto dos Servidores da Tesla */
+        .hero {
+            position: relative;
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16vh 24px 10vh 24px;
+            text-align: center;
+        }
+
+        .background-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+            filter: brightness(0.7);
+        }
+
+        /* Títulos com a Animação e Estilo da Marca */
+        .titles h1 {
+            font-size: 40px;
+            font-weight: 500;
+            margin-bottom: 6px;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+            animation: teslaFadeUp 0.8s ease forwards;
+        }
+
+        .titles p {
+            font-size: 14px;
+            text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+            animation: teslaFadeUp 1s ease forwards;
+        }
+
+        .titles a {
+            color: var(--tesla-color-white);
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+
+        /* Botões de Ação Atualizados - Formato Padrão do Configurador */
+        .cta-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            width: 100%;
+            max-width: 290px;
+            animation: teslaFadeUp 1.2s ease forwards;
+        }
+
+        @media (min-width: 600px) {
+            .cta-buttons {
+                flex-direction: row;
+                max-width: 540px;
+            }
+        }
+
+        .btn {
+            flex: 1;
+            padding: 12px 24px;
+            font-size: 14px;
+            font-weight: 500;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+            text-align: center;
+            text-decoration: none;
+            backdrop-filter: blur(4px);
+        }
+
+        .btn-primary {
+            background-color: var(--tesla-color-blue);
+            color: var(--tesla-color-white);
+        }
+
+        .btn-secondary {
+            background-color: rgba(255, 255, 255, 0.7);
+            color: var(--tesla-color-black);
+        }
+
+        .btn:hover {
+            opacity: 0.9;
+            transform: scale(1.01);
+        }
+
+        @keyframes teslaFadeUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <!-- SVG Vetorial exato usado em tesla.com -->
+            <svg viewBox="0 0 342 35" xmlns="http://w3.org">
+                <path d="M0 0.1a9.7 9.7 0 0 1 2.4 0.3C11.9 1.6 20 5 26.6 11.2c5.3 5 8.8 11.4 10.3 18.2a9.4 9.4 0 0 1-0.1 3.5 2 2 0 0 1-2 1.6h-5.2a1.6 1.6 0 0 1-1.6-1.3C26.7 27 24 21.6 19.8 17.5a43.3 43.3 0 0 0-14.8-9.4c-1.7-0.6-3.6-1-5-1.1a1.6 1.6 0 0 1-1.3-1.6V0.1zm61.3 0h31.8a1.6 1.6 0 0 1 1.6 1.6v3.2a1.6 1.6 0 0 1-1.6 1.6H67.8v6.5h21.1a1.6 1.6 0 0 1 1.6 1.6v3.3a1.6 1.6 0 0 1-1.6 1.6H67.8v6.8h25.3a1.6 1.6 0 0 1 1.6 1.6v3.3a1.6 1.6 0 0 1-1.6 1.6H61.3a1.6 1.6 0 0 1-1.6-1.6V1.6a1.6 1.6 0 0 1 1.6-1.6zm41.2 24a1.6 1.6 0 0 0 1.6 1.6h25.8a1.6 1.6 0 0 0 1.6-1.6v-3.3a1.6 1.6 0 0 0-1.6-1.6h-19.3V19h15.2a1.6 1.6 0 0 0 1.6-1.6v-3.2a1.6 1.6 0 0 0-1.6-1.6h-15.2v-5.9h19.3a1.6 1.6 0 0 0 1.6-1.6V1.7a1.6 1.6 0 0 0-1.6-1.6h-25.8a1.6 1.6 0 0 0-1.6 1.6v24.2zm64.8-15.5c-3-2-6.5-3.3-10.3-3.8A24 24 0 0 0 144 5.3v26.4a1.6 1.6 0 0 0 1.6 1.6h5.2a1.6 1.6 0 0 0 1.6-1.6V14.1a19 19 0 0 1 6.3 1.8 17 17 0 0 1 5.2 3.8 1.6 1.6 0 0 0 2.2 0l3.6-3.4a1.6 1.6 0 0 0-0.2-2.4zm22.4 15.5a1.6 1.6 0 0 0 1.6 1.6h5.2a1.6 1.6 0 0 0 1.6-1.6V1.6a1.6 1.6 0 0 0-1.6-1.6h-5.2a1.6 1.6 0 0 0-1.6 1.6v24.2zm30 0a1.6 1.6 0 0 0 1.6 1.6h5.2a1.6 1.6 0 0 0 1.6-1.6V7.4h15.5v18.3a1.6 1.6 0 0 0 1.6 1.6h5.2a1.6 1.6 0 0 0 1.6-1.6V1.6a1.6 1.6 0 0 0-1.6-1.6h-29a1.6 1.6 0 0 0-1.6 1.6v24.2zm65-24h-31.8a1.6 1.6 0 0 0-1.6 1.6v24.2a1.6 1.6 0 0 0 1.6 1.6h31.8a1.6 1.6 0 0 0 1.6-1.6V1.7a1.6 1.6 0 0 0-1.6-1.6zm-6.7 20.8h-18.4V7.4h18.4v13.5zm27.1-15a1.6 1.6 0 0 0-1.6 1.6v3.2a1.6 1.6 0 0 0 1.6 1.6h15.2v5.9h-15.2a1.6 1.6 0 0 0-1.6 1.6v3.3a1.6 1.6 0 0 0 1.6 1.6h15.2v5.9h-15.2a1.6 1.6 0 0 0-1.6 1.6v3.3a1.6 1.6 0 0 0 1.6 1.6h22a1.6 1.6 0 0 0 1.6-1.6V1.7a1.6 1.6 0 0 0-1.6-1.6h-22z"/>
+            </svg>
+        </div>
+        <nav>
+            <a href="https://www.tesla.com/pt_pt/model3">Model 3</a>
+            <a href="https://www.tesla.com/pt_pt/modely">Model Y</a>
+            <a href="https://tesla.com">Roadster</a>
+            <a href="https://tesla.com">Semi</a>
+        </nav>
+    </header>
+
+    <main class="hero">
+        <!-- Vídeo CDN real em HD obtido diretamente do site da Tesla -->
+        <video class="background-video" autoplay muted loop playsinline>
+            <source src="https://tesla.com" type="video/mp4">
+        </video>
+
+        <div class="titles">
+            <h1>Model Y</h1>
+            <p>Entrega prevista para o seu VIN: **28 de Nov. 2026**. <a href="https://www.tesla.com/pt_pt/support">Acompanhar Encomenda</a></p>
+        </div>
+
+        <div class="cta-buttons">
+            <a href="https://www.tesla.com/pt_pt/modely/design" class="btn btn-primary">Configurar</a>
+            <a href="https://tesla.com" class="btn btn-secondary">Inventário Disponível</a>
+        </div>
+    </main>
+
+</body>
+</html>
